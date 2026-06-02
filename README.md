@@ -4,12 +4,11 @@
 
 `eulero` is a standalone library of complex-valued (and real-compatible) building
 blocks - activations, attention, convolutions, normalization, positional
-embeddings, patch merging - designed to be dropped into any PyTorch model. It was
-extracted and refactored from the `ar_spectra` audio framework so the same blocks
-can be reused across projects (complex VAEs, **source separation**, codecs, ...).
+embeddings, patch merging - designed to be dropped into any PyTorch model and
+reused across projects (complex VAEs, **source separation**, codecs, ...).
 
-This library was built for **EuleroDec**, a complex-valued RVQ-VAE for audio
-coding ([paper](https://arxiv.org/pdf/2601.17517)).
+It was developed for **EuleroDec**, a complex-valued RVQ-VAE for audio coding
+([paper](https://arxiv.org/pdf/2601.17517)).
 
 Everything lives under the `eulero.nn` namespace:
 
@@ -78,11 +77,13 @@ is provided in [`examples/complex_block.py`](examples/complex_block.py).
 
 ---
 
-## Reusing in C-VAE
+## Reusing in a host project
 
-`eulero.nn` deliberately mirrors the original `ar_spectra.blocks` layout, so a
-host project that used to import `ar_spectra.blocks.*` can migrate with a single
-find-replace `ar_spectra.blocks → eulero.nn` plus adding `eulero` as a dependency.
+`eulero.nn` is organized into conventional, category-based submodules
+(`activations`, `attention`, `conv`, `normalization`, `embeddings`,
+`complex_patch_merging`, ...), so adopting it in a host project (such as the
+EuleroDec codebase) is just a matter of adding `eulero` as a dependency and
+importing the blocks you need.
 
 ---
 

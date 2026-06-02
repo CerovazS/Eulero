@@ -1,9 +1,8 @@
 # =============================================================================
 # eulero.nn - plug & play complex-valued (and real-compatible) building blocks.
 #
-# This namespace mirrors the original ``ar_spectra.blocks`` layout 1:1 so that
-# downstream projects (e.g. C-VAE) can migrate with a single find-replace:
-#     ar_spectra.blocks  ->  eulero.nn
+# Building blocks for EuleroDec, a complex-valued RVQ-VAE for audio coding
+# (https://arxiv.org/pdf/2601.17517), reusable in any PyTorch project.
 #
 # Importing ``eulero.nn`` eagerly exposes the most common modules. Specialised
 # variants are always reachable from their submodules, e.g.

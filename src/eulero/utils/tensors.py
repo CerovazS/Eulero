@@ -1,6 +1,6 @@
 # =============================================================================
 # Tensor-shape utilities used by the building blocks.
-# Vendored (minimal) from the ar_spectra project.
+# Building block for EuleroDec (https://arxiv.org/pdf/2601.17517).
 # =============================================================================
 import torch
 
