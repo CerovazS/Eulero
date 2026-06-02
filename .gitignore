@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual envs
+.venv/
+venv/
+
+# uv
+# (keep uv.lock tracked once generated)
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
